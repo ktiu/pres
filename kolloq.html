@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Lehrforschungsbericht</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="kolloq_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="kolloq_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet" href="kolloq_files/reveal.js-3.3.0.1/../pubIHG-0.1/style.css"/>
+    <link rel="stylesheet" href="kolloq_files/reveal.js-3.3.0.1/../pubIHG-0.1/quotes_de.css"/>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="kolloq_files/header-attrs-2.3/header-attrs.js"></script>
+    <script src="kolloq_files/jquery-1.11.3/jquery.min.js"></script>
+    <link href="kolloq_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="kolloq_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+</head>
+<body>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Source+Sans+Pro:400,400i,600,600i,700,700i,900&subset=latin-ext');
+</style>
+
+<script>
+  // R Tips!
+$(document).ready(function(){
+  $("section.rtip").each(function(){
+    $(this).attr("data-background-color", "#860047")
+    $(this).children().each(function(index){
+      if(index>1) {
+        console.log("changing");
+        $(this).addClass("fragment")
+      }
+    });
+  });
+  initReveal();
+});
+</script>
+  <div class="reveal">
+    <div class="slides">
+
+<section class="main-title">
+    <h1 class="title">Lehrforschungsbericht</h1>
+    <div class="subtitle">Methode zur Erstellung randomisierter Statistikklausuren</div>
+<div class="cols frontmatter">
+  <div class="col">
+    <div class="venue">Abschlusskolloquium IKH</div>
+    <div class="date">2. September 2020</div>
+  </div>
+  <div class="col">
+  <div class="author">
+    <div class="author-name">Till Straube</div>
+    <div class="author-email"><a href="mailto:straube@geo.uni-frankfurt.de" class="email">straube@geo.uni-frankfurt.de</a></div>
+  </div>
+  </div>
+</div>
+<div class="cols logos">
+  <div class="col">
+    <img src='kolloq_files/pubIHG-0.1/gu.png' />
+  </div>
+  <div class="col">
+    <img src = 'kolloq_files/pubIHG-0.1/ihg.svg' />
+  </div>
+</div>
+
+</section>
+
+<section>
+<section id="lehrphilosophie" class="title-slide slide level1">
+<h1><q>Lehrphilosophie</q></h1>
+
+</section>
+<section id="transparenz" class="slide level2">
+<h2>1/4 Transparenz</h2>
+<ul>
+<li class="fragment">Erforderliche Leistungen und detaillierte Bewertungskriterien sind den Studierenden von vorneherein bekannt.</li>
+<li class="fragment">Alle Termine und Regelungen (zu Anwesenheit, Aufgabenbearbeitung) werden in der Vorbereitungssitzung verbindlich vereinbart.</li>
+<li class="fragment">Übersichtliche Lehrmaterialien beinhalten diese Informationen und stehen online durchgängig zur Verfügung.</li>
+</ul>
+</section>
+<section id="geschützte-räume" class="slide level2">
+<h2>2/4 Geschützte Räume</h2>
+<ul>
+<li class="fragment">Alle können sich im Plenum respektiert und sicher fühlen: Rassistische, sexistische und andere ausgrenzende Äußerungen werden benannt und unterbunden.</li>
+<li class="fragment">Es gibt einen vertrauensvollen Rahmen für ehrlichen Austausch.</li>
+<li class="fragment">Schwierigkeiten und Momente des Scheitern werden ernst genommen und konstruktiv bearbeitet.</li>
+</ul>
+</section>
+<section id="praktische-übungen" class="slide level2">
+<h2>3/4 Praktische Übungen</h2>
+<ul>
+<li class="fragment">Teilnehmende werden zu einer informierten eigenständigen Anwendung befähigt.</li>
+<li class="fragment">Es stehen variantenreiche Übungen zu allen behandelten Verfahren und Techniken zur Auswahl.</li>
+<li class="fragment">Lösungsorientiertes Denken wird auch durch kurzzeitige, strategische Überforderung der Teilnehmenden eingeübt.</li>
+<li class="fragment">Bei der Besprechung der Aufgaben spielen Lösungsstrategien und Austausch über weiterführende Ressourcen eine wichtige Rolle.</li>
+</ul>
+</section>
+<section id="kritische-reflexion" class="slide level2">
+<h2>4/4 Kritische Reflexion</h2>
+<ul>
+<li class="fragment">Quantitative Verfahren werden historisch und gesellschaftlich kontextualisiert, und ihre Limitationen werden aufgezeigt.</li>
+<li class="fragment">Veranstaltungen sprechen auch Teilnehmende an, die kein Interesse an der praktischen Anwendung quantitativer Verfahren haben.</li>
+<li class="fragment">Ergebnisse der kritischen sozialwissenschaftlichen Forschung zu Praktiken der digitalen Wissensproduktion werden vermittelt.</li>
+</ul>
+</section></section>
+<section>
+<section id="ausgangslage" class="title-slide slide level1">
+<h1>Ausgangslage</h1>
+
+</section>
+<section id="statistische-verfahren-in-der-geographie" class="slide level2">
+<h2>Statistische Verfahren in der Geographie</h2>
+<ul>
+<li class="fragment">Vorlesung mit Fokus auf Grundlagen und Anwendung Statistischer Verfahren</li>
+<li class="fragment">Bachelor und Lehramt im 2. Semester</li>
+<li class="fragment">Durchführung im 3. Jahr in Folge</li>
+</ul>
+</section>
+<section id="situation-im-juni-2020" class="slide level2">
+<h2>Situation im Juni 2020</h2>
+<ul>
+<li class="fragment">Überraschender Termin für Präsenzklausur</li>
+<li class="fragment">Kurzfristige Entscheidung: Online-Papierklausur</li>
+<li class="fragment">Anpassungen:
+<ul>
+<li class="fragment">Erweiterung der Hilfsmittel</li>
+<li class="fragment">Zusätzliche Bearbeitungszeit für Down- und Upload</li>
+<li class="fragment">Einrichtung einer <q>Sandbox</q> zum Üben</li>
+<li class="fragment">Eigenständigkeitserklärung</li>
+<li class="fragment"><strong>Randomisierung der Aufgaben</strong></li>
+<li class="fragment"><strong>Automatische Erstellung von Musterlösungen</strong></li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="herausforderungen" class="title-slide slide level1">
+<h1>Herausforderungen</h1>
+
+</section>
+<section id="gleiche-wahrscheinlichkeit-der-lösungen-multiple-choice" class="slide level2">
+<h2>Gleiche Wahrscheinlichkeit der Lösungen (Multiple Choice)</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a>equalized_sample &lt;-<span class="st"> </span><span class="cf">function</span>(path, <span class="dt">n=</span><span class="dv">5</span>) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>  all &lt;-<span class="st"> </span>yaml<span class="op">::</span><span class="kw">read_yaml</span>(path)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>  category_weights &lt;-<span class="st"> </span>rlist<span class="op">::</span><span class="kw">list.group</span>(all, a) <span class="op">%&gt;%</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">map</span>(<span class="op">~</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="kw">length</span>(.x))</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>  weights &lt;-<span class="st"> </span>all <span class="op">%&gt;%</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">map</span>(<span class="op">~</span><span class="st"> </span><span class="kw">pluck</span>(category_weights, <span class="kw">as.character</span>(.x<span class="op">$</span>a)))</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>  <span class="kw">sample</span>(all, n, <span class="dt">prob =</span> weights)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>}</span></code></pre></div>
+</section>
+<section id="randomisierung-plausibler-zahlen-textaufgaben" class="slide level2">
+<h2>Randomisierung plausibler Zahlen (Textaufgaben)</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a>generate_numbers &lt;-<span class="st"> </span><span class="cf">function</span>(n, mean, sd, min, max, precision) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>  result &lt;-<span class="st"> </span><span class="kw">rnorm</span>(n, mean, sd) <span class="op">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">round</span>(precision)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>  <span class="cf">if</span>(<span class="kw">min</span>(result) <span class="op">&gt;=</span><span class="st"> </span>min <span class="op">&amp;</span><span class="st"> </span><span class="kw">max</span>(result) <span class="op">&lt;=</span><span class="st"> </span>max) {</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>    <span class="kw">return</span>(result)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>  } <span class="cf">else</span> {</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>    <span class="kw">return</span>(<span class="kw">generate_numbers</span>(n, mean, sd, min, max, precision))</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>  }</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>}</span></code></pre></div>
+</section>
+<section id="abstraktion-von-lösungswegen-textaufgaben" class="slide level2">
+<h2>Abstraktion von Lösungswegen (Textaufgaben)</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>get_mean &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">data =</span> <span class="ot">NULL</span>, <span class="dt">symbol =</span> <span class="st">&quot;x&quot;</span>) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>  result &lt;-<span class="st"> </span><span class="kw">list</span>()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>  result<span class="op">$</span>formel &lt;-<span class="st"> </span><span class="kw">sprintf</span>(<span class="st">&quot;$</span><span class="ch">\\</span><span class="st">bar{%s}=</span><span class="ch">\\</span><span class="st">frac{</span><span class="ch">\\</span><span class="st">sum</span><span class="ch">\\</span><span class="st">limits_{i=1}^{n}%s_{i}}</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a><span class="st">                             {n}$&quot;</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>                           symbol,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>                           symbol)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>  <span class="cf">if</span>(<span class="op">!</span><span class="kw">is.null</span>(data)){</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>    result<span class="op">$</span>einsetzen &lt;-<span class="st"> </span><span class="kw">sprintf</span>(<span class="st">&quot;$</span><span class="ch">\\</span><span class="st">bar{%s}=</span><span class="ch">\\</span><span class="st">frac{%s}{%s}$&quot;</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>                                symbol, <span class="kw">fmt</span>(<span class="kw">sum</span>(data)),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>                                <span class="kw">length</span>(data))</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a>    result<span class="op">$</span>raw       &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="kw">mean</span>(data), <span class="dv">2</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a>    result<span class="op">$</span>fmt       &lt;-<span class="st"> </span><span class="kw">fmt</span>(result<span class="op">$</span>raw)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a>    result<span class="op">$</span>ergebnis  &lt;-<span class="st"> </span><span class="kw">sprintf</span>(<span class="st">&quot;$</span><span class="ch">\\</span><span class="st">bar{%s}=%s$&quot;</span>, symbol, result<span class="op">$</span>fmt)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a>  }</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a>  <span class="kw">return</span>(result)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a>}</span></code></pre></div>
+</section></section>
+<section>
+<section id="resultat" class="title-slide slide level1">
+<h1>Resultat</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p><img data-src="Aufgabe1.png" /></p>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<p><img data-src="Aufgabe2.png" /></p>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<p><img data-src="Loesung1.png" /></p>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<p><img data-src="Loesung2.png" /></p>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<p><img data-src="Ergebnis.png" /></p>
+</section></section>
+<section>
+<section id="fazit-und-ausblick" class="title-slide slide level1">
+<h1>Fazit und Ausblick</h1>
+
+</section>
+<section id="fazit" class="slide level2">
+<h2>Fazit</h2>
+<ul>
+<li class="fragment">Schwierige Balance zwischen Abstraktion und Flexibilität</li>
+<li class="fragment">Hoher (einmaliger) Aufwand für Formalisierung von Lösungswegen</li>
+<li class="fragment">Errungenschaften:
+<ul>
+<li class="fragment">Keine Rechenfehler mehr in Skripten und auf Folien?</li>
+<li class="fragment">Nutzung für Klausurengruppen, Probeklausuren</li>
+<li class="fragment">Erleichterung der Korrektur</li>
+</ul></li>
+</ul>
+</section>
+<section id="ausblick" class="slide level2">
+<h2>Ausblick</h2>
+<ul>
+<li class="fragment">Weitere Aufgaben einspeisen… je mehr desto besser!</li>
+<li class="fragment">Abstraktion als R-Paket (für Nachfolger*in?)</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="kolloq_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="kolloq_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+    function initReveal(){
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+        // Display a presentation progress bar
+        progress: false,
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+hash: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        chalkboard: {
+          toggleNotesButton: false,
+          toggleChalkboardButton: false,
+        },
+
+        keyboard: {
+          67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+          66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+          46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+           8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+          68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'kolloq_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+          { src: 'kolloq_files/reveal.js-3.3.0.1/plugin/chalkboard/chalkboard.js', async: true },
+        ]
+      });
+      }
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+<script>
+  /* hand over */
+  var titleText = {
+    "title": 'Lehrforschungsbericht',
+    "date": '2. September 2020',
+    "authors": [ 'Till Straube', ].join(' / ')
+  }
+</script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+<script type="text/javascript">
+
+  /* Center section titles, add overview */
+  var titleSections = document.querySelectorAll('section.level1');
+  var titleH1s = {};
+
+  titleSections.forEach((item, index, array) => {
+    titleH1s[item.id] = item.getElementsByTagName("h1")[0];
+  });
+
+  titleSections.forEach(function(s, index, array) {
+    s.classList.add("center");
+    s.removeChild(s.getElementsByTagName("h1")[0]);
+    for (var t in titleH1s) {
+      var h1 = document.createElement("h1");
+      h1.innerHTML = titleH1s[t].innerHTML;
+      if (t != s.id) h1.classList.add("inactive");
+      s.appendChild(h1);
+    }
+  });
+
+  /* Add header and footer to all slides */
+
+  var h = document.createElement("div");
+  var f = document.createElement("div");
+  h.classList.add("sheader");
+  h.classList.add("hidden");
+  f.classList.add("footer");
+  f.classList.add("hidden");
+  var first = true;
+  var headerItem = [];
+  for (var t in titleH1s) {
+    headerItem[t] = document.createElement("span");
+    headerItem[t].innerHTML = titleH1s[t].innerHTML;
+    if (!first) {
+      var slash = document.createElement("span");
+      slash.innerHTML = "◼";
+      slash.classList.add("inactive");
+      slash.classList.add("redslash");
+      h.appendChild(slash);
+    }
+    headerItem[t].classList.add("inactive");
+    h.appendChild(headerItem[t]);
+    first = false;
+  }
+  titleText.title = $("section.main-title > h1.title").text();
+  f.innerHTML = "<span class='footertitle'>" + titleText.title + "</span><span class='redslash'>◼</span>"  + titleText.date + "<span class='redslash'>◼</span>" + titleText.authors;
+
+  document.getElementsByClassName("reveal")[0].insertBefore(h, document.getElementsByClassName("controls")[0]);
+  document.getElementsByClassName("reveal")[0].insertBefore(f, document.getElementsByClassName("controls")[0]);
+
+
+  Reveal.addEventListener('slidechanged', changeOrReload)
+
+  function changeOrReload() {
+    let currentSlide = Reveal.getCurrentSlide()
+    let h = document.getElementsByClassName("sheader")[0];
+    let f = document.getElementsByClassName("footer")[0];
+    if (currentSlide.classList.contains("main-title")) {
+      h.classList.add("hidden");
+      f.classList.add("hidden");
+    } else {
+      if (currentSlide.classList.contains("level1") || currentSlide.classList.contains("rtip") || currentSlide.hasAttribute("data-background-image") || ! currentSlide.parentNode.classList.contains("stack")) {
+        f.classList.remove("hidden");
+        h.classList.add("hidden");
+      } else {
+        var activeSection = (currentSlide.parentNode.firstElementChild.id);
+        if(activeSection){
+          for (var i in headerItem) {
+            headerItem[i].classList.add("inactive");
+          }
+          headerItem[activeSection].classList.remove("inactive");
+        }
+        h.classList.remove("hidden");
+        f.classList.remove("hidden");
+      }
+    }
+    voteState="ready";
+    return("idk");
+  }
+  //changeOrReload();
+
+  // Hide stuff in speaker view
+  if (window.self !== window.top) {
+    document.body.className += " speaker-view";
+  }
+
+  // Voting
+  var voteState, voteCheck, countdown, countdownToViz = null;
+  $(document).keypress(function(e){
+    v = d3.select(".slide.present .votecontainer");
+    if(v && e.which == 118) {
+      switch(voteState) {
+        case "error":
+          break;
+        case "ready":
+          //askQuestion(v);
+          dummyCountdown(v);
+          break;
+        case "collecting votes":
+          startCountdown(v);
+          break;
+        case "counting down":
+          liftCountdown(v);
+          break;
+        case "showing results":
+          clearArea(v);
+      }
+    }
+  });
+  function dummyCountdown(vote){
+    console.log("dummy")
+    voteState = "dummy";
+    vote.select(".votemsg")
+      .html("Antwort in...<br /><span class='votecountdown'>5</span>");
+    var i=5;
+    countdown = setInterval(function(){
+      console.log(i);
+      i--;
+      vote.select(".votecountdown").html(i);
+    },1000);
+    countdownToClear = setTimeout(function(){
+      clearInterval(countdown);
+      vote.select(".votemsg").html("");
+      Reveal.next();
+    }, 5*1000)
+  }
+  function askQuestion(vote){
+    console.log("clearing");
+    $.get("https://www.eduvote.de/vote/start/ev_reset.php?id=straube@geo.uni-frankfurt.de&pw=t6WFE&_=" + Date.now(), function(data){
+      voteState = "ready";
+      clearArea(vote);
+      console.log("asking");
+      $.get("https://www.eduvote.de/vote/start/ev_set.php?id=straube@geo.uni-frankfurt.de&pw=t6WFE&st=4&sid=NoCode&mc=&_=" + Date.now(), function(data){
+        vote.select(".votemsg").html("<div class='votelive'>Abfrage läuft...</div><div>n&nbsp;=&nbsp;<span class='voten'>0</span></div>");
+        voteState = "collecting votes";
+        voteCheck = setInterval(function(){
+          console.log("counting votes");
+          $.get("https://www.eduvote.de/vote/start/ev_result_n.php?id=straube@geo.uni-frankfurt.de&pw=t6WFE&_=" + Date.now(), function(data){
+            vote.select(".voten").html(parseInt(data));
+          });
+        }, 1000);
+      });
+    });
+  }
+  function startCountdown(vote){
+    voteState = "counting down";
+    vote.select(".votelive")
+      .html("<span class='votecountdown'>10</span><br />Letzte Chance!");
+    var i=10;
+    countdown = setInterval(function(){
+      i--;
+      vote.select(".votecountdown").html(i);
+    },1000);
+    countdownToViz = setTimeout(function(){
+      voteState = "showing results";
+      clearInterval(countdown);
+      clearInterval(voteCheck);
+      vote.select(".votemsg").html("");
+      console.log("getting results");
+      $.get("https://www.eduvote.de/vote/start/ev_result_html.php?id=straube@geo.uni-frankfurt.de&pw=t6WFE&_=" + Date.now(), function(results){
+        console.log("closing vote");
+        $.get("https://www.eduvote.de/vote/start/ev_reset.php?id=straube@geo.uni-frankfurt.de&pw=t6WFE&_=" + Date.now(), function(data){
+          var cleanData = results.split("<br>")[1].split("-").slice(0,4);
+          var total = cleanData.reduce(function(acc, val) { return parseInt(acc) + parseInt(val); });
+          if(total > 0){
+            vote.selectAll(".votebar")
+              .data(cleanData)
+              .transition()
+                .duration(500)
+                .delay(function(d,i){return(200+i*100)})
+                .style("width", function(d){return (d/total)*4+"em"})
+            vote.selectAll(".votewrapper")
+              .data(cleanData)
+              .transition()
+                .duration(500)
+                .style("width", Math.max(...cleanData.map((x)=>x/total))*4+"em")
+            vote.selectAll(".voteprop")
+              .data(cleanData)
+              .html(function(d){return(d+"<br>"+Math.round((d/total)*100)+"%")})
+              .style("opacity", 0)
+              .transition()
+                .duration(4000)
+                .delay(function(d,i){return(500+i*100)})
+                .style("opacity", 100)
+
+          } else {
+            vote.select(".votemsg").html("Nicht genug Stimmen");
+          }
+        });
+      });
+    },10*1000);
+  }
+  function liftCountdown(vote){
+    clearTimeout(countdownToViz);
+    clearInterval(countdown);
+    vote.select(".votemsg").html("<div class='votelive'>Abfrage läuft...</div><div>n&nbsp;=&nbsp;<span class='voten'>0</span></div>");
+    voteState = "collecting votes";
+  }
+  function clearArea(vote){
+    voteState = "ready";
+    vote.selectAll(".votebar")
+      .style("width", "0")
+    vote.selectAll(".votewrapper")
+      .style("width", "0")
+    vote.selectAll(".voteprop")
+      .html("")
+    vote.select(".votemsg")
+      .html("Bereit.");
+  }
+</script>
+
+  </body>
+</html>

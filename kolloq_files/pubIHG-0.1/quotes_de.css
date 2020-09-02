@@ -1,0 +1,7 @@
+.reveal q {
+  font-style: normal;
+  quotes: "„" "“" "," "‘";
+}
+.reveal q.rev {
+  quotes: "," "‘" "„" "“";
+}
